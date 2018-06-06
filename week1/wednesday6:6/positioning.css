@@ -1,0 +1,36 @@
+body, div, a, figure {
+    margin: 0;
+}
+body {
+    max-width: 70%;
+    margin: 0 auto;
+}
+.fixed {
+    height: 150px;
+    width: 200px;
+    padding-top: 10px;
+    text-align: center;
+    vertical-align: middle;
+    background: lightgray;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.relative {
+    background: lightgray;
+    text-align: center;
+    height: 225px;
+    padding-top: 10px;
+    position: relative;
+}
+.absolute {
+    background: darkgray;
+    text-align: center;
+    height: 100px;
+    width: 260px;
+    padding-top: 10px;
+    position: absolute;
+    bottom: 0px;
+    right: -20px;
+
+}
