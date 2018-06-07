@@ -1,0 +1,27 @@
+p {
+    font-family: sans-serif;
+    font-size: 1.1em;
+    font-weight: 500;
+    line-height: 1em;
+    letter-spacing: 2px;
+}
+a {
+    font-size: 2em;
+    display: block;
+}
+.active:active {
+    text-decoration: none;
+    color: green;
+}
+.focus:focus {
+    color: blue;
+}
+.hover:hover {
+    background: lightyellow;
+}
+body:first-child {
+    background: gray;
+}
+p:first-letter {
+    font-size: 2em;
+}
