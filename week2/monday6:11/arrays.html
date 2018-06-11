@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Arrays.html</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script>
+
+        var myGroup = ["Amanda", "Luke", "Philip"];
+
+        console.log(myGroup);
+        
+        for (var teammate in myGroup ) {
+            console.log(myGroup[teammate]);
+        }
+
+        var suits = ["Diamond", "Spades", "Clubs", "Hearts"];
+        var cards = ["Ace of ", "2 of ", "3 of ", "4 of ", "5 of ", "6 of ", "7 of ", "8 of ", "9 of ", "10 of ", "Jack of ", "Queen of ", "King of "];
+    for (var i in cards) {
+        console.log(cards[i]);
+    } //just prints out the cards
+
+    for (var suit in suits) {
+        for (var card in cards) {
+        console.log(cards[card] + suits[suit]);
+        }
+    } //prints out all cards in deck
+    </script>
+</body>
+</html>
