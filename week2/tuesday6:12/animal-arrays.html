@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Array Activity - Unsolved</title>
+</head>
+
+<body>
+
+  <h1>Open the console to see the magic!</h1>
+
+  <script type="text/javascript">
+
+    // Fill in the question marks with what the output will be.
+    var animals = ["parrot", "cat", "dog"];
+
+    // 3
+    console.log(animals.length);
+
+    // cat
+    console.log(animals[1]);
+
+    // dog
+    console.log(animals[2]);
+
+    // parrot
+    console.log(animals[0]);
+
+    // undefined
+    console.log(animals[animals.length]);
+
+    // dog
+    console.log(animals[animals.length - 1]);
+
+    // -1
+    console.log(animals.indexOf("bear"));
+
+    // 0
+    console.log(animals.indexOf("parrot"));
+
+    // undefined
+    console.log(animals[-1]);
+
+    if (animals.indexOf("bear") === -1) {
+      console.log("There are no bears here");
+    }
+
+    console.log("================================")
+
+
+
+    //log every element of an array
+    testArray1 = [0, 1, 2, 3, 4]
+    testArray2 = ["Zero", "one", "3", "three", "Four"]
+    testArray3 = [
+      [0, 1, 2, 3, 4],
+      5,
+      "Hello",
+      [],
+      function (arg1) { console.log(arg1) }
+    ];
+
+    function logArray(arr) {
+      for (i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+      }
+      //log every element of the array
+    }
+
+    // logArray(testArray1);
+    // logArray(testArray2);
+    logArray(testArray3);
+
+
+
+      // var array = [1, "run", "people", 14, true];
+      // function logArray(arr) {
+      //   for (i=0; i<arr.length; i++) {
+      //     console.log(arr[i])
+      //   }
+      // }
+
+      // logArray(testArray1);
+
+
+  </script>
+
+</body>
+
+</html>

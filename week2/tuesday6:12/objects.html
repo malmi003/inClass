@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Objects in JS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script> -->
+</head>
+<body>
+    <script>
+
+        var animals = {
+            species: "Duck",
+            color: "yellow",
+            isAlive: true,
+            bites: false,
+            eats: ["carrots","weeds","old bread"]
+        }
+
+        console.log(animals);
+    //print the species of every animal in animals that are alive
+    //none of this works properly
+        for (var animalIndex in animals) {
+            if (animals[animalIndex].isAlive == true) {
+                document.write(
+                    `
+                        <div>
+                            <h1>${animal.name}</h1>
+                            <p>${animal.species}</p>
+                        </div>
+                    `
+
+                )
+            }
+        }
+    </script>
+</body>
+</html>

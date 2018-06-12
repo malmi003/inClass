@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <script>
+        
+        var animals = [
+            {
+                species: "Duck",
+                color: "White",
+                isAlive: false,
+                bites: false,
+                eats: ["brains"],
+                "name": "Donald"
+            },
+            {
+                species: "Thamnophis elegans terrestris",
+                color: "green",
+                isAlive: false,
+                weight: 20
+            },
+            {
+                species: "sloth",
+                isAlive: true,
+                speed: "very slow",
+                bites: "slowly",
+                color: "mossy",
+                name: "SloMo"
+            },
+            {
+                species: "Joe Gathje",
+                color: "Mostly White",
+                isAlive: true,
+                bites: "Not that hard",
+                eats: ["Anything","Not Carrots","Or Mushrooms"],
+                name: "Joe"
+            },
+            {
+                species:"Badger, Honey",
+                color:"Brown",
+                isAlive:true,
+                bites:true,
+                eats:["Everything"],
+                name:"Winston"
+            }, 
+            {
+                species: "Lyger",
+                color: "Beige",
+                isAlive: true,
+                bites: true,
+                eats: ["Joe Gathje"],
+                "name": "Napolean",
+
+           },
+           {
+                species: "Shark",
+                color: "gray",
+                isAlive: "true",
+                eats: "fish",
+                habitat: "ocean",
+                
+            },
+            {
+                species : "giraffe",
+                color : "yellow",
+                isAlive: "We Think So",
+                whatItEats : ["grass", "plants", "veggies"],
+                weigth: "Giraffe's Be Fat Dawg, Idk how much they weigh"
+            },
+            {
+                species: "dog",
+                color: "brown",
+                isAlive: true,
+                deadly: false,
+                cute: true,
+                isDog: true,
+                eats: ["dog food", "cat food", "food"],
+            },
+            {
+                isDumb: true,
+                isFatt: true,
+                smellsBad: false,
+                isAlive: true
+            }
+
+        ];
+
+
+        //print the species of every animal in animals that is alive
+        for ( var animalIndex in animals ) {
+            var animal = animals[animalIndex]
+            if ( animal.isAlive == true ) {
+                // console.log(animal.species)
+
+                document.write(
+                    `
+                        <div>
+                                <h1>${animal.name}</h1>     
+                                <p>${animal.species}</p>     
+                        </div>
+
+                    `
+                )
+
+            }
+        }
+        
+        console.log()
+
+
+
+
+        
+        
+    </script>
+    
+</body>
+</html>
