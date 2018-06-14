@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Content!</title>
+    <!-- jQuery tag -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+    //this is added to top to defer the loading of your code. It is best practice to always add to code. There is a shorter version of this but this is easier syntax to read: https://www.w3schools.com/JQuery/jquery_syntax.asp
+        $(document).ready(function () {
+            // Array holds all of the drinks available
+            var drinkList = [
+                "Coffee: $5",
+                "Espresso: $7",
+                "Cappuccino: $6",
+                "Latte: $4",
+                "Tea: $3",
+                "Ice Coffee: $6",
+                "Ice Espresso: $8",
+                "Ice Latte: $6",
+                "Ice Tea: $4"
+            ];
+
+            // 1. Create code that "grabs" the div with the matching id (#drink-options);
+            var drinkDiv = $("#drink-options");
+
+            //another addition to create ul
+            var newList = $("<ul>");
+            drinkDiv.append(newList);
+
+
+            // 2. Create a for loop that creates HTML content of all the drinks using JavaScript.
+            // HINT: You will need to use each of the following methods: createElement, textContent, appendChild
+            for (drinkIndex = 0; drinkIndex < drinkList.length; drinkIndex++) {
+                var newListItem = $("<li>");
+                newListItem.HTML(drinkList[drinkIndex]);
+
+                newList.append(newListItem);
+
+            }
+        });
+    </script>
+</head>
+
+
+<body>
+
+    <h1>Drink Selection!</h1>
+    <hr>
+
+    <!-- Here we create a generic drink-options div -->
+    <div id="drink-options"></div>
+
+</body>
+
+</html>
