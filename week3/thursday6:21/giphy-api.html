@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Giphy API</title>
+</head>
+
+<body>
+  <h1>Enter a search term:</h1>
+  <input type="text" id="searchTerm">
+  <button id="searchButton">Search</button>
+
+  <h1>Gifs go below:</h1>
+
+  <div id = "gifDiv"></div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    // Example queryURL for Giphy API
+    $("#searchButton").on("click", function() {
+
+
+      var searchTerm = $("#searchTerm").val();// = "World Cup meme dogs"
+
+
+      var queryURL = "https://api.giphy.com/v1/gifs/search" ;
+
+      $.ajax({
+        data: {
+          "rating":"pg",
+          "limit":12,
+          "q": searchTerm,
+          "api_key": "dc6zaTOxFJmzC"
+        },
+        url: queryURL,
+        method: "GET",
+      }) //now the request is sent
+      //goes over the internet
+      //the server starts 
+      //the server sends a response
+      //response goes back over the internet to us
+      .then(function(response) { //when the response reaches us, this runs
+        $("#gifDiv").empty();
+        console.log(response);
+
+        //loop over every image
+        response.data.forEach(element => {
+          let url = element.images.fixed_height.url;
+          console.log("Url:", url)
+          //create a new img tag
+          let newImg = $("<img>");
+          //set the src of the image tag
+          newImg.attr("src", url);
+          //insert the image into the DOM
+          $("#gifDiv").append(newImg);
+
+          
+
+        });
+
+        // let gifDiv = $("#gifDiv");
+      });
+  });
+  </script>
+
+</body>
+
+</html>
